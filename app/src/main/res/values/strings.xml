@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Photo Frame app</string>
+    <string name="dynamic_and_stylish_photoprame">Dynamic and stylish Photo frame</string>
+    <string name="todo">TODO</string>
 </resources>

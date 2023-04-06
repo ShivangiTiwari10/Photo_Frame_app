@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
     var next: ImageButton? = null
     private var previous: ImageButton? = null
 
+
+    var counter = 0
+    var person = arrayOf("Mangla", "Zain", "Savina", "Babita")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,13 +30,26 @@ class MainActivity : AppCompatActivity() {
 
         binding.next.setOnClickListener {
 
+            counter++
+            if (counter == person.size) counter = 0
+
+            binding.Name.text = person[counter]
             onClicked(next!!)
+
         }
 
         binding.previous.setOnClickListener {
+
+            counter--
+            if(counter<0) counter=person.size-1
+            binding.Name.text = person[counter]
             onClicked(previous!!)
+
         }
+
+
     }
+
 
     private fun onClicked(view: View) {
         if (view == next) {
@@ -42,6 +59,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
 
 
 

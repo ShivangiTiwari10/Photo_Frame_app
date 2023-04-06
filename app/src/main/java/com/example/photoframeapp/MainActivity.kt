@@ -16,8 +16,8 @@ class MainActivity : AppCompatActivity() {
     private var previous: ImageButton? = null
 
 
-    var counter = 0
-    var person = arrayOf("Mangla", "Zain", "Savina", "Babita")
+    private var counter = 0
+    private var person = arrayOf("Virat", "Shreya", "Savina", "Babita")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

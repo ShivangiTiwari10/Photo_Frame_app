@@ -1,5 +1,6 @@
 package com.example.photoframeapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar!!.hide()
         viewFlipper = binding.viewFlipper
         next = binding.next
         previous = binding.previous
@@ -41,12 +43,18 @@ class MainActivity : AppCompatActivity() {
         binding.previous.setOnClickListener {
 
             counter--
-            if(counter<0) counter=person.size-1
+            if (counter < 0) counter = person.size - 1
             binding.Name.text = person[counter]
             onClicked(previous!!)
 
         }
 
+
+        binding.otherWay.setOnClickListener {
+
+            val intent = Intent(this, Otherway::class.java)
+            startActivity(intent)
+        }
 
     }
 

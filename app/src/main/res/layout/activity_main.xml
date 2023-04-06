@@ -18,8 +18,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:contentDescription="@string/todo"
-            android:scaleType="fitXY"
-            android:src="@drawable/image1" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/virat" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -27,7 +27,7 @@
             android:layout_height="fill_parent"
             android:contentDescription="@string/todo"
             android:scaleType="fitXY"
-            android:src="@drawable/image2" />
+            android:src="@drawable/shreya" />
 
         <ImageView
             android:id="@+id/imageView3"

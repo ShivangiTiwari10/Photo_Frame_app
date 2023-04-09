@@ -10,6 +10,7 @@ class Otherway : AppCompatActivity() {
 
     private var currentImage = 0
     private lateinit var image: ImageView
+    var name = arrayOf("Virat Kohli","Shreya","Laptop","BlueGirl")
 
     private lateinit var binding: ActivityOtherwayBinding
 
@@ -40,9 +41,10 @@ class Otherway : AppCompatActivity() {
             val idImgToShowInt =
                 this.resources.getIdentifier(idImgToShowString, "id", packageName)
 
-
             image = findViewById(idImgToShowInt)
             image.alpha = 1f
+
+            binding.textView.text = name[currentImage]
         }
 
         binding.imgNext.setOnClickListener {
@@ -64,6 +66,9 @@ class Otherway : AppCompatActivity() {
 
             image = findViewById(idImgToShowInt)
             image.alpha = 1f
+
+            binding.textView.text = name[currentImage]
+
         }
     }
 }
